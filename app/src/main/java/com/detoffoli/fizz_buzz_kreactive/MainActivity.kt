@@ -1,14 +1,11 @@
 package com.detoffoli.fizz_buzz_kreactive
 
 import android.os.Bundle
-import com.google.android.material.snackbar.Snackbar
 import androidx.appcompat.app.AppCompatActivity
 import androidx.navigation.findNavController
 import androidx.navigation.ui.AppBarConfiguration
 import androidx.navigation.ui.navigateUp
 import androidx.navigation.ui.setupActionBarWithNavController
-import android.view.Menu
-import android.view.MenuItem
 import com.detoffoli.fizz_buzz_kreactive.databinding.ActivityMainBinding
 
 class MainActivity : AppCompatActivity() {

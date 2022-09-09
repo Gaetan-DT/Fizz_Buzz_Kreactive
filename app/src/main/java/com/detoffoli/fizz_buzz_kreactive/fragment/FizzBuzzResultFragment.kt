@@ -41,7 +41,7 @@ class FizzBuzzResultFragment : Fragment() {
     private fun resolveList(fizzBuzz: FizzBuzz) {
         val listString = arrayListOf<String>()
         for (i in 1..fizzBuzz.limit.toInt()) {
-            var value: String = ""
+            var value = ""
             if (i % fizzBuzz.number1.toInt() == 0)
                 value += fizzBuzz.word1
             if (i % fizzBuzz.number2.toInt() == 0)
