@@ -1,5 +1,17 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
+  <component name="DesignSurface">
+    <option name="filePathToZoomLevelMap">
+      <map>
+        <entry key="..\:/Pro/Projet/Fizz_Buzz_Kreactive/app/src/main/res/layout/fragment_first.xml" value="0.296875" />
+        <entry key="..\:/Pro/Projet/Fizz_Buzz_Kreactive/app/src/main/res/layout/fragment_fizz_buzz_result.xml" value="0.5442708333333334" />
+        <entry key="..\:/Pro/Projet/Fizz_Buzz_Kreactive/app/src/main/res/layout/fragment_form.xml" value="0.5442708333333334" />
+        <entry key="..\:/Pro/Projet/Fizz_Buzz_Kreactive/app/src/main/res/layout/fragment_second.xml" value="0.5442708333333334" />
+        <entry key="..\:/Pro/Projet/Fizz_Buzz_Kreactive/app/src/main/res/layout/lay_string.xml" value="0.5432291666666667" />
+        <entry key="..\:/Pro/Projet/Fizz_Buzz_Kreactive/app/src/main/res/menu/menu_main.xml" value="0.4898148148148148" />
+      </map>
+    </option>
+  </component>
   <component name="ProjectRootManager" version="2" languageLevel="JDK_11" default="true" project-jdk-name="JDK" project-jdk-type="JavaSDK">
     <output url="file://$PROJECT_DIR$/build/classes" />
   </component>
