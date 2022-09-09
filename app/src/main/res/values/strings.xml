@@ -9,4 +9,12 @@
 
     <string name="hello_first_fragment">Hello first fragment</string>
     <string name="hello_second_fragment">Hello second fragment. Arg: %1$s</string>
+    <string name="number_1">Number 1</string>
+    <string name="number_2">Number 2</string>
+    <string name="word_1">Word 1</string>
+    <string name="fizz">Fizz</string>
+    <string name="word_2">Word 2</string>
+    <string name="buzz">Buzz</string>
+    <string name="limit">Limit</string>
+    <string name="display_result">Display result</string>
 </resources>
