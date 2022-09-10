@@ -9,7 +9,6 @@ import androidx.lifecycle.ViewModelProvider
 import androidx.navigation.fragment.findNavController
 import androidx.recyclerview.widget.DividerItemDecoration
 import com.detoffoli.fizz_buzz_kreactive.R
-import com.detoffoli.fizz_buzz_kreactive.data.FizzBuzz
 import com.detoffoli.fizz_buzz_kreactive.databinding.FragmentFizzBuzzResultBinding
 import com.detoffoli.fizz_buzz_kreactive.view_adapter.FizzBuzzResultAdapter
 import com.detoffoli.fizz_buzz_kreactive.view_model.MainActivityViewModel
@@ -28,7 +27,7 @@ class FizzBuzzResultFragment : Fragment() {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
         this.mMainViewModel = ViewModelProvider(requireActivity())[MainActivityViewModel::class.java]
-        this.mMainViewModel.getFizzBuzz().observe(viewLifecycleOwner) { this.resolveList(it) }
+        this.mMainViewModel.getFizzBuzz().observe(viewLifecycleOwner) { this.mFizzBuzzResultAdapter.submitList(it.getStrListResult()) }
         this.mFizzBuzzResultAdapter = FizzBuzzResultAdapter()
         this.mBinding.fragFizzBuzzResultRecyclerView.adapter = this.mFizzBuzzResultAdapter
         this.mBinding.fragFizzBuzzResultRecyclerView.addItemDecoration(DividerItemDecoration(context,
@@ -36,20 +35,5 @@ class FizzBuzzResultFragment : Fragment() {
         this.mBinding.fragFizzBuzzResultBtnPrevious.setOnClickListener {
             findNavController().navigate(R.id.action_SecondFragment_to_FirstFragment)
         }
-    }
-
-    private fun resolveList(fizzBuzz: FizzBuzz) {
-        val listString = arrayListOf<String>()
-        for (i in 1..fizzBuzz.limit.toInt()) {
-            var value = ""
-            if (i % fizzBuzz.number1.toInt() == 0)
-                value += fizzBuzz.word1
-            if (i % fizzBuzz.number2.toInt() == 0)
-                value += fizzBuzz.word2
-            if (value.isEmpty())
-                value = i.toString()
-            listString.add("$i : $value")
-        }
-        this.mFizzBuzzResultAdapter.submitList(listString)
     }
 }

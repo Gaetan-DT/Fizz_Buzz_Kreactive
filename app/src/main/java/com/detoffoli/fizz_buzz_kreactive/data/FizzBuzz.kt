@@ -6,4 +6,19 @@ data class FizzBuzz(
     val word1: String,
     val word2: String,
     val limit: Number,
-)
+) {
+    fun getStrListResult(): ArrayList<String> {
+        val listString = arrayListOf<String>()
+        for (i in 1..this.limit.toInt()) {
+            var value = ""
+            if (i % this.number1.toInt() == 0)
+                value += this.word1
+            if (i % this.number2.toInt() == 0)
+                value += this.word2
+            if (value.isEmpty())
+                value = i.toString()
+            listString.add("$i : $value")
+        }
+        return listString
+    }
+}
